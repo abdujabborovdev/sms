@@ -4,12 +4,7 @@ import time
 from aiogram.types import Message
 from fake_useragent import UserAgent
 
-PROXY_USER = "vsg9A6pT8wouSwG"
-PROXY_PASS = "IPX4a6cVD5nfO2o"
-PROXY_HOST = "thehub.proxy-cheap.com"
-PROXY_PORT = "8080"
-
-proxy_url = f"http://{PROXY_USER}:{PROXY_PASS}@{PROXY_HOST}:{PROXY_PORT}"
+proxy_url = f"http://vsg9A6pT8wouSwG:IPX4a6cVD5nfO2o@proxy-us.proxy-cheap.com:5959"
 proxies = {"http": proxy_url, "https": proxy_url}
 
 
