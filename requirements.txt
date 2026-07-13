@@ -1,3 +1,4 @@
 aiogram>=3.7.0
-
+asyncpg
+greenlet
 environs>=11.0.0

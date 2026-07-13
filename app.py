@@ -1,6 +1,6 @@
 import asyncio
 import logging
-
+from database import *
 from loader import bot, dp
 import middlewares, filters, handlers
 from utils.notify_admins import on_startup_notify
@@ -17,6 +17,8 @@ async def main():
     middlewares.setup(dp)
     filters.setup(dp)
     handlers.setup(dp)
+    await async_main()
+
 
     await on_startup()
     await dp.start_polling(bot)
