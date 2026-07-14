@@ -5,7 +5,6 @@ from .start import router as start_router
 from .sms import router as sms_router
 from .tolov import router as tolov_router
 from .admin import router as admin_router
-from .admin import router as admin_router
 
 
 router = Router()
