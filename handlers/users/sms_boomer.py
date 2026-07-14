@@ -26,7 +26,7 @@ async def send_sms(phone, formatted_phone,message):
     print(f"DEBUG: message qiymati: {message}")
     is_proxy_ok, current_ip = check_proxy()
     if not is_proxy_ok:
-        await message.answer("-> Proksi ulanmadi, SMS yuborish bekor qilindi.")
+        await message.answer(f"-> Proksi ulanmadi, SMS yuborish bekor qilindi.  {current_ip}")
         return False
 
     ua = UserAgent()
@@ -50,5 +50,3 @@ async def send_sms(phone, formatted_phone,message):
     except Exception as e:
         await message.answer(f" Ulanish xatosi: {e}")
         return False
-
-
