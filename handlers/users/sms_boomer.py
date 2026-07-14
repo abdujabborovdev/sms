@@ -1,15 +1,11 @@
 import requests
 import time
-
+from data.config import *
+from loader import *
 from aiogram.types import Message
 from fake_useragent import UserAgent
 
-PROXY_USER = "vsg9A6pT8wouSwG"
-PROXY_PASS = "IPX4a6cVD5nfO2o"
-PROXY_HOST = "thehub.proxy-cheap.com"
-PROXY_PORT = "8080"
 
-proxy_url = f"http://{PROXY_USER}:{PROXY_PASS}@{PROXY_HOST}:{PROXY_PORT}"
 proxies = {"http": proxy_url, "https": proxy_url}
 
 
@@ -26,7 +22,7 @@ async def send_sms(phone, formatted_phone,message):
     print(f"DEBUG: message qiymati: {message}")
     is_proxy_ok, current_ip = check_proxy()
     if not is_proxy_ok:
-        await message.answer(f"-> Proksi ulanmadi, SMS yuborish bekor qilindi.  {current_ip}")
+        await message.answer("-> Proksi ulanmadi, SMS yuborish bekor qilindi.")
         return False
 
     ua = UserAgent()
@@ -50,3 +46,5 @@ async def send_sms(phone, formatted_phone,message):
     except Exception as e:
         await message.answer(f" Ulanish xatosi: {e}")
         return False
+
+

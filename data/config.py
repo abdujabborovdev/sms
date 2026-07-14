@@ -11,6 +11,7 @@ load_dotenv(ENV_PATH, override=True)
 BOT_TOKEN = (os.getenv("BOT_TOKEN") or "").strip().strip('"').strip("'")
 ADMINS = [admin.strip() for admin in (os.getenv("ADMINS") or "").split(",") if admin.strip()]
 IP = os.getenv("ip", "localhost")
+proxy_url = os.getenv("PROXY_URL")
 
 if not BOT_TOKEN:
     raise RuntimeError("BOT_TOKEN .env faylida topilmadi")

@@ -38,3 +38,4 @@ async def admin_panel(message: Message):
 
     except Exception as e:
         await message.answer(f"Bazadan o'qishda xatolik: {e}")
+        await message.answer(f"Bazadan o'qishda xatolik: {e}")
