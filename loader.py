@@ -5,7 +5,7 @@ from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.client.session.aiohttp import AiohttpSession
 from dotenv import load_dotenv
 from data import config
-import os
+
 load_dotenv()
 
 proxy_url = os.getenv("PROXY_URL")
