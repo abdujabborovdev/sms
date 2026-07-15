@@ -97,7 +97,7 @@ Qolgan {qoldi} limitingiz qaytarildi!""")
                 yuborildi = yuborildi + 1
             else:
                 pass
-            await asyncio.sleep(3)
+            await asyncio.sleep(5)
         await call.message.answer(f"""Smslar muvafiyaqiyatlik yuborilindi {yuborildi}-ta""")
 
     except Exception as e:
